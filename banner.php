@@ -6,8 +6,6 @@
             <p>Compartí tu talento, creá tu red de contactos, informate sobre los eventos más importantes y viví nuevas experiencias.</p>
         </article>
         <button class="buttonbanner"><a href="#FAQ">Conoce más</a></button>
-         
-    
     </div>
     <div class="col-lg-4 offset-1 registro">
         

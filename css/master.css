@@ -108,6 +108,8 @@ main{
     text-decoration: none;
     color: black;
     font-weight: bold;
+    height: 40px;
+    padding-top: 8px;
     display: block;
 }
 .buttonbanner{
