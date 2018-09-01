@@ -9,7 +9,6 @@
         <div class="row">
             <div class="col-lg-12 align-content-center">    
                 <label for="nombre" class="label-formulario">Nombre y Apellido</label>
-                <br>
                 <div>
                     <input type="text" name="nombre" placeholder="p.e. Juan Perez" class="contenedor-input" required>
                 </div>
@@ -19,7 +18,6 @@
         <div class="row">
             <div class="col-lg-12 align-content-center">
                 <label for="mail" class="label-formulario">Correo Electronico</label>
-                <br>
                 <div>
                     <input type="text" name="mail" placeholder="p.e. juanperez@mail.com" class="contenedor-input" required>
                 </div>
@@ -29,7 +27,6 @@
         <div class="row">
             <div class="col-lg-12 align-content-center">
                 <label for="usuario" class="label-formulario">Nombre de Usuario</label>
-                <br>
                 <div>
                 <input type="text" name="usuario" placeholder="p.e. Juan_Perez" class="contenedor-input" required>
                 </div>
@@ -39,7 +36,6 @@
         <div class="row">
             <div class="col-lg-12 align-content-center">
                 <label for="contraseña" class="label-formulario">Contraseña</label>
-                <br>
                 <div>
                 <input type="password" name="contraseña" class="contenedor-input" required>
                 </div>
