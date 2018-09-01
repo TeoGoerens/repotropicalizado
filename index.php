@@ -10,13 +10,17 @@
 </head>
 <body>
     <div class="container-fluid">
-        <?php
-            include("header.php")
-        ?>
-
-        <?php
-            include("banner.php")
-        ?>
-    </div>
+        <header>
+            <?php
+                include("header.php")
+            ?>
+        </header>
+    
+        <main>
+            <?php
+                include("banner.php")
+            ?>
+        </main>
+   </div> 
 </body>
 </html>
