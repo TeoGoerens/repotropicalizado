@@ -1,5 +1,12 @@
 <form action="" method="GET">
 
+    <div class="row">
+            <div class="col-lg-12 align-content-center">
+                <label for="nro-tel">Telefono:</label>
+                <input type="tel" name="nro-tel" placeholder="+54(011)48598992"required>
+            </div>
+    </div>
+
     <label>Edad:</label>
         <input type="number" name="edad" value="edad" required>
 

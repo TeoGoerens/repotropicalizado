@@ -8,41 +8,46 @@
     <div class="col-lg-12">
         <div class="row">
             <div class="col-lg-12 align-content-center">    
-                <label>Nombre y Apellido:</label>
-                <input type="text" name="nombre" required>
+                <label for="nombre" class="label-formulario">Nombre y Apellido</label>
+                <br>
+                <div>
+                    <input type="text" name="nombre" placeholder="p.e. Juan Perez" class="contenedor-formulario" required>
+                </div>
             </div>
         </div>
 
         <div class="row">
             <div class="col-lg-12 align-content-center">
-                <label>Correo Electronico:</label>
-                <input type="text" name="mail" placeholder="abcdef@email.com" required>
+                <label for="mail" class="label-formulario">Correo Electronico</label>
+                <br>
+                <div>
+                    <input type="text" name="mail" placeholder="p.e. juanperez@mail.com" class="contenedor-formulario" required>
+                </div>
             </div>
         </div>
 
         <div class="row">
             <div class="col-lg-12 align-content-center">
-                <label>Telefono:</label>
-                <input type="tel" name="nro-tel" placeholder="+54(011)48598992"required>
+                <label for="usuario" class="label-formulario">Nombre de Usuario</label>
+                <br>
+                <div>
+                <input type="text" name="usuario" placeholder="p.e. Juan_Perez" class="contenedor-formulario" required>
+                </div>
             </div>
         </div>
 
         <div class="row">
             <div class="col-lg-12 align-content-center">
-                <label>Nombre de Usuario:</label>
-                <input type="text" name="usuario" required>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-12 align-content-center">
-                <label>Contraseña:</label>
-                <input type="password" name="contraseña" required>
+                <label for="contraseña" class="label-formulario">Contraseña</label>
+                <br>
+                <div>
+                <input type="password" name="contraseña" class="contenedor-formulario" required>
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12 align-content-center">
-                <button type="submit">Registrarse</button>
+                <button type="submit" class="boton-registro">Registrarse</button>
             </div>
         </div>
     </div>
