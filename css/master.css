@@ -12,6 +12,11 @@
     box-sizing: border-box;
 }
 
+.container-fluid{
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
 header{
     position: fixed;
     width: 100%;
@@ -213,6 +218,7 @@ main{
     background-color: white;
     height: 500px;
     border-radius: 1%;
+    margin-bottom: 50px;
 }
 
 .contenedor-contraseña-login{
@@ -234,4 +240,32 @@ main{
     text-align: center;
 }
 
+.footer-container{
+    background-color: #E1E6B9;
+    height: 55px;
+    width: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
+.logo-footer{
+    margin-left: 60px;
+    width: 55px;
+    height: 55px;
+}
+
+.footer-container h2{
+    padding-top: 14px;
+    font-size: 1.5em;
+    padding-left: 20%;
+}
+
+.footer-container p{
+    padding-top: 17px;
+}
+
+.footer-container a{
+    display: block;
+    padding-top: 17px;
+}
 

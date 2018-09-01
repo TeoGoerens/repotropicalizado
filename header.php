@@ -7,7 +7,7 @@
                 <h1><strong>SoundClub</strong></h1>
             </div>
             <div class="headerbuttons col-lg-5">
-                <button class="buttonsignin">Sign In</button>
+            <a href="login.php"><button class="buttonsignin">Sign In</button></a>
                 <button class="buttonsignup">Sign Up</button>
             </div>
         </div>
