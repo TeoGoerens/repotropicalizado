@@ -159,6 +159,8 @@ main{
     border-style: none;
     margin-top: 10px;
     font-weight: bold;
+    border-radius: 5%;
+    color: white;
 }
 
 .faq-container{
@@ -196,3 +198,39 @@ main{
 .lista-faq a:hover{
     font-size: 1.05em;
 }
+
+.login{
+    background-color: #E1E6B9;
+    width: 100%;
+    margin: 0 auto;
+    height: 600px;
+}
+
+.login-container{
+    margin-top: 40px;
+    border: 1px solid #375D3B;
+    background-color: white;
+    height: 500px;
+    border-radius: 1%;
+}
+
+.contenedor-contraseña-login{
+    margin-bottom: 5px;
+}
+
+.login-container a p{
+    margin-left: 10%;
+    margin-bottom: 10px;
+}
+
+.logo-login{
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.titulo-login{
+    text-align: center;
+}
+
+
