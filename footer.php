@@ -1,7 +1,7 @@
 <div class="container-fluid footer-container">
     <div class="row">
         <div class="col-lg-1">
-            <img class= "logo logo-footer" src="images/logo.jpg" alt="logo">
+            <img class= "logo logo-footer" src="images/logo.png" alt="logo">
         </div>
         <div class="col-lg-2">
             <h2>SoundClub</h2>

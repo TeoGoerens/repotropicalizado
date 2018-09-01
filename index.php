@@ -16,18 +16,16 @@
             ?>
         </header>
     
-        <main>
-        
-            <?php 
-                include("")
-            ?>
-            
+        <main>         
             <?php
                 include("banner.php")
             ?>
 
             <?php
                 include("faq.php")
+            ?>
+            <?php
+                include("footer.php")
             ?>
         </main>
    </div> 

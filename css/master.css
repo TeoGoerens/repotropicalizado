@@ -81,7 +81,8 @@ main{
 .banner-container{
     background-image: url(../images/background.jpg);
     background-attachment: fixed;
-    height: 570px;
+    min-height: 570px;
+    overflow: hidden;
 }
 
 .info-general{
@@ -120,7 +121,7 @@ main{
 .buttonbanner{
     background-color: #C4D7A4;
     opacity: 1;
-    width: 30%;
+    width: 200px;
     height: 40px;
     border: none;
 }
@@ -242,7 +243,8 @@ main{
 
 .footer-container{
     background-color: #E1E6B9;
-    height: 55px;
+    min-height: 55px;
+    overflow: hidden;
     width: 100%;
     padding-left: 0%;
     padding-right: 0%;
