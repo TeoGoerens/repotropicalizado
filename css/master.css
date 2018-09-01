@@ -6,14 +6,73 @@
 #FFFFFF
 */
 
-.encabezado{
-    height: 80px;
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.headernaming{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.encabezado h1{
+    width: 50%;
+    text-align: left;
+}
+
+.logo{
+    height: 100px;
+    width: 100px;
+    margin-right: 5%;
+}
+
+.headerbuttons{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5%;
+}
+
+.buttonsignin{
+    background-color: #375D3B;
+    border: solid #375D3B;
+    color: white;
+    width: 100px;
+    height: 50px;
+    font-weight: bold;
+}
+
+.buttonsignup{
+    background-color: #C4D7A4;
+    border: solid #C4D7A4;
+    color: #375D3B;
+    width: 100px;
+    height: 50px;
+    font-weight: bold;
+}
+
+main{
+    padding-top: 100px;
+    z-index: 10;
 }
 
 .banner-container{
     background-image: url(../images/background.jpg);
     background-attachment: fixed;
-    height: 520px;
+    height: 570px;
 }
 
 .registro{
