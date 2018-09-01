@@ -9,14 +9,14 @@
     <title>SoundClub</title>
 </head>
 <body>
+    <div class="container-fluid">
+        <?php
+            include("header.php")
+        ?>
 
-    <?php
-        include("header.php")
-    ?>
-
-    <?php
-        include("banner.php")
-    ?>
-    
+        <?php
+            include("banner.php")
+        ?>
+    </div>
 </body>
 </html>

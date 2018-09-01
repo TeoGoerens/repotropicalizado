@@ -6,21 +6,22 @@
 #FFFFFF
 */
 
+
 .encabezado{
-    height: 80px;
+    height: 72px;
 }
 
 .banner-container{
     background-image: url(../images/background.jpg);
     background-attachment: fixed;
-    height: 520px;
+    height: 586px;
 }
 
 .registro{
-    margin-top: 50px;
+    margin-top: 80px;
     background-color: white;
     height: 420px;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .contenedor-formulario{
