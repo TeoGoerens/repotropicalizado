@@ -16,10 +16,14 @@ header{
     position: fixed;
     width: 100%;
     z-index: 1000;
+    border-bottom: 1px solid #375D3B;
+}
+
+.header-container{
+    background-color: white;
 }
 
 .headernaming{
-    background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -110,4 +114,40 @@ main{
     border-style: none;
     margin-top: 10px;
     font-weight: bold;
+}
+
+.faq-container{
+    height: 570px;
+}
+
+.titulo-faq{
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 40px;
+    margin-bottom: 55px;
+}
+
+.lista-faq{
+    margin-bottom: 25px;
+    margin-left: 10%;
+    list-style-type: disc;
+}
+
+.lista-faq li{
+   
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.lista-faq a{
+    text-decoration: none;
+}
+
+.lista-faq a p{
+    color: black;
+    font-size: 1.1em;
+}
+
+.lista-faq a:hover{
+    font-size: 1.05em;
 }

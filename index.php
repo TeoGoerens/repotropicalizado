@@ -20,6 +20,10 @@
             <?php
                 include("banner.php")
             ?>
+
+            <?php
+                include("faq.php")
+            ?>
         </main>
    </div> 
 </body>
