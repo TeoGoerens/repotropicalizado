@@ -25,6 +25,11 @@
                 include("faq.php")
             ?>
         </main>
+        <footer>
+            <?php    
+                include("footer.php")
+            ?>
+        </footer>
    </div> 
 </body>
 </html>
