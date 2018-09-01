@@ -17,6 +17,11 @@
         </header>
     
         <main>
+        
+            <?php 
+                include("")
+            ?>
+            
             <?php
                 include("banner.php")
             ?>
@@ -25,11 +30,6 @@
                 include("faq.php")
             ?>
         </main>
-        <footer>
-            <?php    
-                include("footer.php")
-            ?>
-        </footer>
    </div> 
 </body>
 </html>
