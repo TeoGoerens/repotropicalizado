@@ -55,6 +55,10 @@ header{
     padding-right: 5%;
 }
 
+.headerbuttons-banner{
+    display: none;
+}
+
 .buttonsignin{
     background-color: #375D3B;
     border: solid #375D3B;
@@ -64,6 +68,10 @@ header{
     font-weight: bold;
 }
 
+.buttonsignin:hover{
+    transform: scale(1.1);
+}
+
 .buttonsignup{
     background-color: #C4D7A4;
     border: solid #C4D7A4;
@@ -71,6 +79,10 @@ header{
     width: 100px;
     height: 50px;
     font-weight: bold;
+}
+
+.buttonsignup:hover{
+    transform: scale(1.1);
 }
 
 main{
@@ -83,6 +95,8 @@ main{
     background-attachment: fixed;
     min-height: 570px;
     overflow: hidden;
+    display: flex;
+    flex-direction: row;
 }
 
 .info-general{
@@ -108,6 +122,7 @@ main{
     color: white;
     font-weight: lighter;
     font-size: 1.1em;
+    text-align: center;
 }
 
 .buttonbanner a{
@@ -135,6 +150,7 @@ main{
     background-color: white;
     height: 420px;
     border-radius: 10px;
+    min-width: 300px;
 }
 
 .contenedor-formulario{
@@ -167,7 +183,10 @@ main{
     margin-top: 10px;
     font-weight: bold;
     border-radius: 5%;
-    color: white;
+}
+
+.boton-registro:hover{
+    opacity: 0.7;
 }
 
 .faq-container{
@@ -214,12 +233,12 @@ main{
 }
 
 .login-container{
-    margin-top: 40px;
+    margin-top: 80px;
     border: 1px solid #375D3B;
     background-color: white;
-    height: 500px;
+    height: 450px;
     border-radius: 1%;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 .contenedor-contraseña-login{
@@ -234,7 +253,7 @@ main{
 .logo-login{
     display: block;
     margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 5px;
 }
 
 .titulo-login{
@@ -251,23 +270,85 @@ main{
 }
 
 .logo-footer{
-    margin-left: 60px;
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-top: 10px;
 }
 
 .footer-container h2{
-    padding-top: 14px;
     font-size: 1.5em;
-    padding-left: 20%;
+    float: left;
+    margin-top: 20px;
 }
 
 .footer-container p{
-    padding-top: 17px;
+    margin-top: 24px;
+    float: left;
+    margin-left: -130px;
 }
 
 .footer-container a{
     display: block;
-    padding-top: 17px;
+    margin-top: 24px;
+    float: left;
 }
+
+@media (max-width: 992px){
+    .contenedor-input{
+        width: 90%;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+    .label-formulario{
+        margin-left: 5%;
+    }
+    .info-general{
+        height: 420px;
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 768px){
+    .headerbuttons{
+        display: none;
+    }
+
+    .headernaming{
+        justify-content: center;
+    }
+
+    .logo{
+        margin-right: 2%;
+    }
+
+    .banner-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-general{
+        margin-top: 30px;
+        width: 90%;
+        height: 250px;
+    }
+    
+    .info-general h2{
+        display: none;
+    }
+
+    .registro{
+        width: 90%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .headerbuttons-banner{
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        padding-top: 50px;
+    }
+}
+
 
