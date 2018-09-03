@@ -10,10 +10,10 @@
 </head>
 <body>
     <div class="row login">
-        <div class="col-lg-4 offset-4 login-container">
+        <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4 login-container">
             <div class="row">
-                <div class="col-lg-12">
-                    <img class= "logo logo-login" src="images/logo.jpg" alt="logo">
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <img class= "logo" src="images/logo.jpg" alt="logo">
                 </div>
             </div>
             <div class="row">

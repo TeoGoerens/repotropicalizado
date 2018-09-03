@@ -1,20 +1,17 @@
 <div class="container-fluid footer-container">
     <div class="row">
-        <div class="col-lg-3 offset-1">
-            <img class= "logo logo-footer" src="images/logo.png" alt="logo">    
-            <h2>SoundClub</h2>
+        <div class="d-flex col-12 justify-content-center col-lg-6 justify-content-lg-start">
+            <img class="ml-lg-5 logo-footer" src="images/logo.png" alt="logo">    
+            <h2 class="ml-1 ml-lg-2">SoundClub</h2>
+            <p class="ml-2 ml-lg-4">Copyright @ 2018</p>
         </div>
-        <div class="col-lg-2">
-            <p>Copyright @ 2018</p>
-        </div>
-
-        <div class="col-lg-2"></div>
-        <div class="col-lg-1">
-            <a href="#">Términos</a>
-        </div>
-        <div class="col-lg-3">
-            <a href="#">Politica de privacidad y cookies</a>
+        <div class="d-flex col-12 col-lg-6 justify-content-around">
+            <div class="d-flex align-items-center">
+                <a href="#" class="py-2">Términos</a>
+            </div>
+            <div class="d-flex align-items-center">
+                <a href="#" class="py-2">Politica de privacidad y cookies</a>
+            </div>
         </div>
     </div>
-
 </div>
