@@ -9,6 +9,7 @@
     <title>SoundClub</title>
 </head>
 <body>
+
     <div class="container-fluid">
         <header>
             <?php
