@@ -48,10 +48,23 @@ function validate($data){
 }
 
 function crearUsuario($data){
+    
+    if(file_exists('usuarios.json')){
+        $recurso = fopen('usuarios.json' , 'r');
+        $i = 0;
+        do{
+            $i++;
+        }while ( ($linea = fgets($recurso)) != false);
+        $usuario['id'] = $i;
+    }else{
+        fopen('usuarios.json' , 'w');
+        $usuario['id'] = 1;
+    }
     $usuario['nombre'] = $data['nombre'];
     $usuario['email'] = $data['email'];
     $usuario['usuario'] = $data['usuario'];
     $usuario['contrasenia'] = password_hash($data['contrasenia'],PASSWORD_DEFAULT);
+    
     return $usuario;
 }
 
