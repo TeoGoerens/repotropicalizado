@@ -1,3 +1,10 @@
+<?php
+    include('functions.php');
+    if($_POST){
+        redirect("formulario-infoAdicional.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +16,9 @@
     <title>Document</title>
 </head>
 <body>
+    <?php
+        include("header.php");
+    ?> 
     <div class="row login">
         <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4 login-container">
             <div class="row">
@@ -21,18 +31,18 @@
                     <h1 class="titulo-login">SoundClub</h1>
                 </div>
             </div>
-            <form>
+            <form action="" method="POST">
                 <div class="row">
                     <div class="col-lg-12">
                         <div>
                             <label for="user" class="label-formulario">Nombre de Usuario o Email</label>
                             <div>
-                                <input type="text" name="usuario" class="contenedor-input" required>
+                                <input type="text" name="usuario" class="contenedor-input">
                             </div>
 
                             <label for="contraseña" class="label-formulario">Contraseña</label>
                             <div>
-                                <input type="password" name="contraseña" class="contenedor-input contenedor-contraseña-login" required>
+                                <input type="password" name="contraseña" class="contenedor-input contenedor-contraseña-login">
                             </div>
                             <a href="#"><p>¿Olvido su contraseña?</p></a> 
 

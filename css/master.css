@@ -243,7 +243,7 @@ main{
 }
 
 .login-container{
-    margin-top: 80px;
+    margin-top: 50px;
     border: 1px solid #375D3B;
     background-color: white;
     height: 450px;
@@ -300,22 +300,6 @@ main{
 
 .contenedor-formulario-adicional{
     background-color: #E1E6B9;
-}
-
-.registro-adicional ul li{
-   margin-bottom: 30px;
-   list-style-type: none;
-}
-
-.label-formulario-adicional{
-    display: inline-block;
-    width: 10%;
-    font-size: 1.1em;
-    font-weight: bold;
-}
-
-.contenedor-input-adicional{
-    width: 20%;
 }
 
 @media (max-width: 992px){

@@ -3,14 +3,12 @@
 <!-- Una vez terminado eso ya te crea la cuenta y te lleva a otro formulario para terminar de tomarte los datos en este caso para darte mayor personalizacion de la aplicacion, donde te pida edad, gustos musicales, si tocas algun instrumento y cual. Si responde que si toca un instrumento que tambien se le pregunta si forma parte de una banda y cosas asi. Todo esto pensado para poder ofrecerle al usuario mejor navegacion en la pagina-->
 
 <?php
-    
     include("functions.php");
     if($_POST){
         $errors = validate($_POST);
         if(empty($errors)){
-            guardarUsuario(crearUsuario($_POST));
-            header("Location: formulario-infoAdicional.php");
-            exit;
+            guardarRegistro(crearUsuario($_POST),'usuarios.json');
+            redirect('login.php');
         }
     }
 
