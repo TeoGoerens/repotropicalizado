@@ -1,6 +1,7 @@
 <?php
     include('functions.php');
     if($_POST){
+        dd($_POST);
         $errors = validateFormularioAdicional($_POST);
         if(empty($errors)){
             guardarRegistro(crearInformacion($_POST),'info-usuarios.json');
@@ -65,17 +66,11 @@
                         <div class="col">
                             <select name="pais" class="form-control">
                                 <option value="">Pais</option>
-                                <?php if(file_exists('paises.json')) :?>
                                 <?php
-                                $i=0;
-                                $recurso = fopen('paises.json' , 'r');
-                                while ( ($linea = fgets($recurso)) != false) :?>
-                                    <option value="<?= $i;?>"><?= json_decode($linea,true)['nombre'];?></option>
-                                <?php endwhile;?> 
-                                <?php
-                                    $i++;
-                                ?>
-                            <?php endif;?>
+                                    $array = dbConnect('paises.json');
+                                    foreach ($array as $key) :?>
+                                        <option value="<?=$key['id']?>"><?= $key['nombre'];?></option>
+                                    <?php endforeach;?>                                
                             </select>
                         </div>
 
@@ -90,17 +85,11 @@
                         <div class="col">
                             <select name="gustos-musicales" class="form-control">
                                 <option value="">Elige tus gustos musicales</option>
-                                <?php if(file_exists('gustos-musicales.json')) :?>
                                 <?php
-                                $i=0;
-                                $recurso = fopen('gustos-musicales.json' , 'r');
-                                while ( ($linea = fgets($recurso)) != false) :?>
-                                    <option value="<?= $i;?>"><?= json_decode($linea,true)['nombre'];?></option>
-                                <?php endwhile;?> 
-                                <?php
-                                    $i++;
-                                ?>
-                            <?php endif;?>
+                                    $array = dbConnect('gustos-musicales.json');
+                                    foreach ($array as $key) :?>
+                                        <option value="<?=$key['id']?>"><?= $key['nombre'];?></option>
+                                    <?php endforeach;?>
                             </select>
                         </div>
                     </div>
@@ -116,17 +105,11 @@
                         <div class="col">
                             <select name="instrumento" class="form-control">
                                 <option value="">Cual</option>
-                                <?php if(file_exists('instrumentos.json')) :?>
                                 <?php
-                                $i=0;
-                                $recurso = fopen('instrumentos.json' , 'r');
-                                while ( ($linea = fgets($recurso)) != false) :?>
-                                    <option value="<?= $i;?>"><?= json_decode($linea,true)['nombre'];?></option>
-                                <?php endwhile;?> 
-                                <?php
-                                    $i++;
-                                ?>
-                            <?php endif;?>
+                                    $array = dbConnect('instrumentos.json');
+                                    foreach ($array as $key) :?>
+                                        <option value="<?=$key['id']?>"><?= $key['nombre'];?></option>
+                                    <?php endforeach;?>
                             </select>
                         </div>
                     </div>
