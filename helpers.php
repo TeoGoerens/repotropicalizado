@@ -22,7 +22,7 @@ function redirect($url){
 
 //Check
 function check(){
-    return isset($_SESSIO['username']);
+    return isset($_SESSION['username']);
 }
 
 //Guest

@@ -1,8 +1,12 @@
 <?php
     include('functions.php');
+    
     if($_POST){
-        redirect("formulario-infoAdicional.php");
+        $respuesta = validarContrasenia($_POST['usuario'], $_POST['contrasenia']);
+        dd($respuesta);
     }
+    
+
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +39,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div>
-                            <label for="user" class="label-formulario">Nombre de Usuario o Email</label>
+                            <label for="user" class="label-formulario">Nombre de Usuario</label>
                             <div>
                                 <input type="text" name="usuario" class="contenedor-input">
                             </div>
