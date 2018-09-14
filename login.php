@@ -1,9 +1,27 @@
 <?php
+
+    session_start();
+
     include('functions.php');
     
-    if($_POST){
-        $respuesta = validarContrasenia($_POST['usuario'], $_POST['contrasenia']);
-        dd($respuesta);
+    if(isset($_COOKIE['usuario'])){
+        redirect('home.php');
+    } else {
+        if($_POST){
+            $output = validarContrasenia($_POST['usuario'], $_POST['contrasenia']);
+            if($output == 0){
+                $_SESSION['usuario'] = $_POST['usuario'];
+                if(isset($_POST['remember'])){
+                    setcookie('usuario',$_POST['usuario'],time()+3600*24*365);
+                }
+                redirect("home.php");
+            } elseif ($output == 1) {
+                $errorLogin['contrasenia'] = "La contraseña es incorrecta";
+            } elseif ($output == 2) {
+                $errorLogin['usuario'] = "El usuario no existe";
+            }
+        }
+        
     }
     
 
@@ -39,18 +57,23 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div>
+                            <?php if(isset($errorLogin['usuario'])){?>
+                            <p class="alert-warning alertas"><?= $errorLogin['usuario'];?></p>
+                            <?php }?>
                             <label for="user" class="label-formulario">Nombre de Usuario</label>
                             <div>
-                                <input type="text" name="usuario" class="contenedor-input">
+                                <input type="text" name="usuario" class="contenedor-input" value="<?php if(isset($errorLogin['usuario']) || $_POST == false){echo "";} else {echo $_POST['usuario'];}?>">
                             </div>
-
-                            <label for="contraseña" class="label-formulario">Contraseña</label>
+                            <?php if(isset($errorLogin['contrasenia'])){?>
+                            <p class="alert-warning alertas"><?= $errorLogin['contrasenia'];?></p>
+                            <?php }?>
+                            <label for="contrasenia" class="label-formulario">Contraseña</label>
                             <div>
-                                <input type="password" name="contraseña" class="contenedor-input contenedor-contraseña-login">
+                                <input type="password" name="contrasenia" class="contenedor-input contenedor-contraseña-login">
                             </div>
-                            <a href="#"><p>¿Olvido su contraseña?</p></a> 
+                            <a href="passwordrecover.php"><p>¿Olvido su contraseña?</p></a> 
 
-                            <input type="checkbox" class="label-formulario" value="1">
+                            <input type="checkbox" class="label-formulario" name="remember" value="">
                             <label for="recordarme" >Recordarme</label>
                             
 

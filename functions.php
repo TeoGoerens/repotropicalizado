@@ -62,15 +62,19 @@ function buscarUsuario($usuario){
 
 function validarContrasenia($usuario, $contrasenia){
     $array = dbConnect('usuarios.json');
+    $errorLogin=[];
     foreach($array as $user){
         if($user['usuario'] == $usuario){
-            if(password_verify($contrasenia, $user['contrsenia'])==true){
-                return true;
+            if(password_verify($contrasenia, $user['contrasenia']) == true){
+                return 0;
+            } else {
+                return 1;
             }
         }
     }
-    return false;
+    return 2;
 }
+
 
 function crearUsuario($data){
     

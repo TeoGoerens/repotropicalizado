@@ -1,6 +1,6 @@
 <?php
 // Debug
-function dd(...$param)
+function dd($param)
 {
     echo "<pre>";
     die(var_dump($param));
@@ -22,7 +22,7 @@ function redirect($url){
 
 //Check
 function check(){
-    return isset($_SESSION['username']);
+    return isset($_SESSION['usuario']);
 }
 
 //Guest
