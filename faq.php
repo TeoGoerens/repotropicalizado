@@ -1,4 +1,4 @@
-<div class="row faq-container">
+<div class="row faq-container w-100 mr-0 ml-0">
 
     <div class="col-lg-12">
         <h2 class="titulo-faq" id="FAQ">Preguntas Frecuentes</h2>

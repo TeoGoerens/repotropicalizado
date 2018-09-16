@@ -22,7 +22,7 @@ session_start();
 <div class="container-fluid">
         <header>
             <?php
-                include("header2.php")
+                include("header.php")
             ?>
         </header>
     

@@ -35,14 +35,14 @@ header{
     align-items: center;
 }
 
-.encabezado h1{
-    width: 50%;
-    text-align: left;
+.headernaming h1{
+    font-size: 1.8em;
+    padding-top: 10px;
 }
 
 .logo{
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     margin-right: 5%;
 }
 
@@ -86,7 +86,7 @@ header{
 }
 
 main{
-    padding-top: 100px;
+    padding-top: 80px;
     z-index: 10;
 }
 
@@ -192,7 +192,7 @@ main{
     margin-top: 10px;
     font-weight: bold;
     border-radius: 5%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .boton-registro:hover{
@@ -236,18 +236,15 @@ main{
 }
 
 .login{
-    background-color: #E1E6B9;
     width: 100%;
-    margin: 0 auto;
-    height: 600px;
+    background-color: #E1E6B9;
 }
 
 .login-container{
-    margin-top: 50px;
     border: 1px solid #375D3B;
     background-color: white;
     border-radius: 1%;
-    margin-bottom: 70px;
+    margin-top: 80px;
 }
 
 .contenedor-contraseña-login{
@@ -257,6 +254,11 @@ main{
 .login-container a p{
     margin-left: 10%;
     margin-bottom: 10px;
+}
+
+.login-container a{
+    text-decoration: none;
+    color: black;
 }
 
 .logo-login{

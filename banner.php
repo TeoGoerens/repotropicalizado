@@ -1,4 +1,4 @@
-<div class="row banner-container">
+<div class="row banner-container w-100 mr-0 ml-0">
     <div class="col-12 col-md-5 offset-md-1 col-lg-5 offset-lg-1 info-general">
         <h2>Bienvenido a <strong>SoundClub</strong></h2>
         <article>

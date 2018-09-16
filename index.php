@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <div class="container-fluid">
+    <div class="container-fluid mr-0 ml-0">
         <header>
             <?php
                 include("header.php")

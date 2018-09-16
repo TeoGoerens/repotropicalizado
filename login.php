@@ -38,56 +38,54 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-        include("header.php");
-    ?> 
-    <div class="row login">
-        <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4 login-container">
-            <div class="row">
-                <div class="col-lg-12 d-flex justify-content-center">
-                    <img class= "logo" src="images/logo.jpg" alt="logo">
+    <div class="login">
+        <div class="row w-100 ml-0 mr-0">
+            <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4 login-container mb-5">
+                <a href="index.php"><div class="row mt-3">
+                    <div class="col-lg-12 d-flex justify-content-center">
+                        <img class= "logo mr-0" src="images/logo.jpg" alt="logo">
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="titulo-login">SoundClub</h1>
-                </div>
-            </div>
-            <form action="" method="POST">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div>
-                            <?php if(isset($errorLogin['usuario'])){?>
-                            <p class="alert-warning alertas"><?= $errorLogin['usuario'];?></p>
-                            <?php }?>
-                            <label for="user" class="label-formulario">Nombre de Usuario</label>
-                            <div>
-                                <input type="text" name="usuario" class="contenedor-input" value="<?php if(isset($errorLogin['usuario']) || $_POST == false){echo "";} else {echo $_POST['usuario'];}?>">
-                            </div>
-                            <?php if(isset($errorLogin['contrasenia'])){?>
-                            <p class="alert-warning alertas"><?= $errorLogin['contrasenia'];?></p>
-                            <?php }?>
-                            <label for="contrasenia" class="label-formulario">Contraseña</label>
-                            <div>
-                                <input type="password" name="contrasenia" class="contenedor-input contenedor-contraseña-login">
-                            </div>
-                            <a href="passwordrecover.php"><p>¿Olvido su contraseña?</p></a> 
-
-                            <input type="checkbox" class="label-formulario" name="remember" value="">
-                            <label for="recordarme" >Recordarme</label>
-                            
-
-                            <button type="submit" class="boton-registro">Iniciar Sesion</button>
-                        </div>
+                        <h1 class="titulo-login">SoundClub</h1>
                     </div>
+                </div></a>
+                <form action="" method="POST">
+                    <div class="row mb-5">
+                        <div class="col-lg-12">
+                            <div>
+                                <?php if(isset($errorLogin['usuario'])){?>
+                                <p class="alert-warning alertas"><?= $errorLogin['usuario'];?></p>
+                                <?php }?>
+                                <label for="user" class="label-formulario">Nombre de Usuario</label>
+                                <div>
+                                    <input type="text" name="usuario" class="contenedor-input" value="<?php if(isset($errorLogin['usuario']) || $_POST == false){echo "";} else {echo $_POST['usuario'];}?>">
+                                </div>
+                                <?php if(isset($errorLogin['contrasenia'])){?>
+                                <p class="alert-warning alertas"><?= $errorLogin['contrasenia'];?></p>
+                                <?php }?>
+                                <label for="contrasenia" class="label-formulario">Contraseña</label>
+                                <div>
+                                    <input type="password" name="contrasenia" class="contenedor-input contenedor-contraseña-login">
+                                </div>
+                                <a href="passwordrecover.php"><p>¿Olvido su contraseña?</p></a> 
 
-                </div>
-            </form>
+                                <input type="checkbox" class="label-formulario" name="remember" value="">
+                                <label for="recordarme" >Recordarme</label>
+                                
+
+                                <button type="submit" class="boton-registro mb-0">Iniciar Sesion</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
         </div>
-
         <?php
-            include("footer.php");
-        ?>
+                include("footer.php");
+            ?>
     </div>    
 </body>
 </html>

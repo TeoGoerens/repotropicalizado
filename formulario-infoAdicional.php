@@ -16,6 +16,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/master.css">
     <title>SoundClub</title>
@@ -83,8 +84,7 @@
                     
                     <div class="form-row mb-5">
                         <div class="col">
-                            <select name="gustos-musicales" class="form-control">
-                                <option value="">Elige tus gustos musicales</option>
+                            <select name="gustos-musicales" class="form-control selectpicker" multiple data-live-search="true">
                                 <?php
                                     $array = dbConnect('gustos-musicales.json');
                                     foreach ($array as $key) :?>
@@ -138,5 +138,8 @@
             include("footer.php");
         ?>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
 </body>
 </html>
