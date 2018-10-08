@@ -4,16 +4,19 @@
 
 <?php
     include("functions.php");
+    include 'loader.php';
+
     if($_POST){
-        $errors = validate($_POST);
+        $usuario = new User($_POST['nombre'], $_POST['email'], $_POST['usuario'], $_POST['contrasenia']);
+        $errors = Validate::registerValidate($db, $usuario);
         if(empty($errors)){
-            guardarRegistro(crearUsuario($_POST),'usuarios.json');
+            $usuarioArray = $db->createUser($usuario);
+            $db->saveUser($usuarioArray);
             redirect('login.php');
         }
     }
 
 ?>
-
 
 <form action="" method="POST">
 
@@ -38,7 +41,7 @@
                 <?php endif; ?>
                 <label for="mail" class="label-formulario">Correo Electronico</label>
                 <div>
-                    <input type="text" name="email" placeholder="p.e. juanperez@mail.com" class="contenedor-input" value="<?= (isset($_POST['email'])) ? $_POST['email'] : ""?>">
+                    <input type="text" name="email" placeholder="p.e. juanperez@mail.com" class="contenedor-input" value="<?= isset($errors['email']) || $_POST == false ? "" : $_POST['email']?>">
                 </div>
             </div>
         </div>
@@ -50,7 +53,7 @@
                 <?php endif; ?>
                 <label for="usuario" class="label-formulario">Nombre de Usuario</label>
                 <div>
-                <input type="text" name="usuario" placeholder="p.e. Juan_Perez" class="contenedor-input" value="<?= (isset($_POST['usuario'])) ? $_POST['usuario'] : ""?>">
+                <input type="text" name="usuario" placeholder="p.e. Juan_Perez" class="contenedor-input" value="<?= isset($errors['usuario']) || $_POST == false ? "" : $_POST['usuario']?>">
                 </div>
             </div>
         </div>

@@ -1,14 +1,20 @@
 <?php
 
-    session_start();
+require 'loader.php';
+require 'helpers.php';
 
-    include('functions.php');
+    if(Auth::check())
+    {
+        redirect('home.php');
+    }
     
+    Auth::set();
+
     if(isset($_COOKIE['usuario'])){
         redirect('home.php');
     } else {
         if($_POST){
-            $output = validarContrasenia($_POST['usuario'], $_POST['contrasenia']);
+            $output = Auth::validarContrasenia($db, $_POST['usuario'], $_POST['contrasenia']);
             if($output == 0){
                 $_SESSION['usuario'] = $_POST['usuario'];
                 if(isset($_POST['remember'])){

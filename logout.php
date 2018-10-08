@@ -1,8 +1,9 @@
 <?php
 
 require('functions.php');
+require 'loader.php';
 
-if(guest()){
+if(Auth::guest()){
     setcookie('usuario', null, time()-1);
     redirect('index.php');
 } else {

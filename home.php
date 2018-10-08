@@ -1,11 +1,10 @@
 <?php 
 
-require('functions.php');
+require 'loader.php';
 
-session_start();
+Auth::set();
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
