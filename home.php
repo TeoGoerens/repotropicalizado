@@ -25,11 +25,30 @@ Auth::set();
             ?>
         </header>
     
-        <main>         
-            <h1>Te has loguedo con exito</h1>
-            <h3>Bienvenido a tu perfil <?php if(isset($_COOKIE['usuario'])) {echo($_COOKIE['usuario']);} else {echo($_SESSION['usuario']);} ?></h3>
+        <main class="home-container">         
+            <div class="row">
+                <div class="col-lg-12 text-center mt-4">
+                    <h1>Te has loguedo con exito</h1>
+                    <h3>Bienvenido a tu perfil <?php if(isset($_COOKIE['usuario'])) {echo($_COOKIE['usuario']);} else {echo($_SESSION['usuario']);} ?></h3>
+                </div>
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-lg-2 modulos">
+                    <?php
+                        include("modulos.php");
+                    ?>
+                </div>
+
+                <div class="col-lg-9 offset-lg-1 perfil">
+                    <?php
+                        include("perfil.php");
+                    ?>
+                </div>
+            </div>
             <?php
-                include("footer.php")
+                include("footer.php");
             ?>
         </main>
    </div>

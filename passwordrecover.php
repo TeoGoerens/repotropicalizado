@@ -1,5 +1,5 @@
 <?php
-require('functions.php');
+require 'helpers.php';
 ?>
 
 <!DOCTYPE html>

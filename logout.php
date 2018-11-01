@@ -1,6 +1,6 @@
 <?php
 
-require('functions.php');
+require 'helpers.php';
 require 'loader.php';
 
 if(Auth::guest()){

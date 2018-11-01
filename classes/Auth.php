@@ -20,13 +20,20 @@ class Auth
         return !self::check();
     }
 
-    public static function validarContrasenia(JsonDB $db, $usuario, $contrasenia)
+    public static function validarContrasenia($usuario, $contrasenia)
     {
-        $array = $db->dbConnect();
-        $errorLogin=[];
-        foreach($array as $user){
-            if($user['usuario'] == $usuario){
-                if(password_verify($contrasenia, $user['contrasenia']) == true){
+        $row = [];
+        $conexion = MysqlDB::dbConnect();
+        $sql = "select * from users";
+        $preparar= $conexion->prepare($sql);
+        $preparar->execute();
+        while ($resultado = $preparar->fetch())
+        {
+            $row[]= $resultado;
+        }
+        foreach($row as $user){
+            if($user['user'] == $usuario){
+                if(password_verify($contrasenia, $user['password']) == true){
                     return 0;
                 } else {
                     return 1;

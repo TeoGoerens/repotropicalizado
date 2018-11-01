@@ -3,15 +3,15 @@
 <!-- Una vez terminado eso ya te crea la cuenta y te lleva a otro formulario para terminar de tomarte los datos en este caso para darte mayor personalizacion de la aplicacion, donde te pida edad, gustos musicales, si tocas algun instrumento y cual. Si responde que si toca un instrumento que tambien se le pregunta si forma parte de una banda y cosas asi. Todo esto pensado para poder ofrecerle al usuario mejor navegacion en la pagina-->
 
 <?php
-    include("functions.php");
+    include 'helpers.php';
     include 'loader.php';
 
     if($_POST){
         $usuario = new User($_POST['nombre'], $_POST['email'], $_POST['usuario'], $_POST['contrasenia']);
-        $errors = Validate::registerValidate($db, $usuario);
+        $errors = Validate::registerValidate($usuario);
         if(empty($errors)){
-            $usuarioArray = $db->createUser($usuario);
-            $db->saveUser($usuarioArray);
+            $usuarioArray = MysqlDB::createUser($usuario);
+            MysqlDB::saveUser($usuarioArray);
             redirect('login.php');
         }
     }

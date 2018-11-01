@@ -303,6 +303,27 @@ main{
     background-color: #E1E6B9;
 }
 
+.home-container{
+    background-color: #E1E6B9;
+}
+
+.buscaMusicos:hover{
+    background-color: #375D3B;
+}
+
+.eventos:hover{
+    background-color: #375D3B;
+}
+
+.compartiMusica:hover{
+    background-color: #375D3B;
+}
+
+.descubriMusica:hover{
+    background-color: #375D3B;
+}
+
+
 @media (max-width: 992px){
     .contenedor-input{
         width: 90%;

@@ -2,7 +2,7 @@
 
 class Validate
 {
-    public static function registerValidate(JsonDB $db, User $user)
+    public static function registerValidate(User $user)
     {
     $nombre = $user->getFullName();
     $email = $user->getEmail();
@@ -37,12 +37,12 @@ class Validate
         $errors['contrasenia']= "La contraseña debe tener 8 caracteres como minimo";
     }
 
-    if($db->dbUserSearch($usuario))
+    if(MysqlDB::dbUserSearch($usuario))
     {
         $errors['usuario'] = "El usuario ingresado ya existe";
     }
     
-    if($db->dbEmailSearch($email))
+    if(MysqlDB::dbEmailSearch($email))
     {
         $errors['email'] = "El email ingresado ya existe";
     }

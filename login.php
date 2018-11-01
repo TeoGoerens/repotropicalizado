@@ -14,7 +14,7 @@ require 'helpers.php';
         redirect('home.php');
     } else {
         if($_POST){
-            $output = Auth::validarContrasenia($db, $_POST['usuario'], $_POST['contrasenia']);
+            $output = Auth::validarContrasenia($_POST['usuario'], $_POST['contrasenia']);
             if($output == 0){
                 $_SESSION['usuario'] = $_POST['usuario'];
                 if(isset($_POST['remember'])){
